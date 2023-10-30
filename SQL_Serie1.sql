@@ -305,19 +305,19 @@ INSERT INTO consorcio(idprovincia,idlocalidad,idconsorcio, Nombre,direccion,idzo
 
 -- Lote de Pruebas de Tabla Gasto: --
 INSERT INTO gasto (idprovincia,idlocalidad,idconsorcio,periodo,fechapago,idtipogasto,importe) 
-VALUES (5,13,4,2,'20231029',3,52425.67) -- Inserta porque pasa todas las restricciones (fechapago >= GETDATE(), periodo <= MONTH(GETDATE())) [Se probó el 29/10/2023]
+VALUES (5,12,4,2,'20231029',3,52425.67) -- Inserta porque pasa todas las restricciones (fechapago >= GETDATE(), periodo <= MONTH(GETDATE())) [Se probó el 29/10/2023]
 
 INSERT INTO gasto (idprovincia,idlocalidad,idconsorcio,periodo,fechapago,idtipogasto,importe) 
-VALUES (6,13,4,10,'20240706',4,9289.57) -- Inserta porque pasa todas las restricciones (fechapago >= GETDATE(), periodo <= MONTH(GETDATE())) [Se probó el 29/10/2023]
+VALUES (6,85,4,10,'20240706',4,9289.57) -- Inserta porque pasa todas las restricciones (fechapago >= GETDATE(), periodo <= MONTH(GETDATE())) [Se probó el 29/10/2023]
 
 INSERT INTO gasto (idprovincia,idlocalidad,idconsorcio,periodo,fechapago,idtipogasto,importe) 
-VALUES (5,13,4,3,'20130322',3,61328.39) -- No inserta por la restriccion "CK_fechapago" que permite solo fechas iguales o posteriores a la fecha actual.
+VALUES (5,12,4,3,'20130322',3,61328.39) -- No inserta por la restriccion "CK_fechapago" que permite solo fechas iguales o posteriores a la fecha actual.
 
 INSERT INTO gasto (idprovincia,idlocalidad,idconsorcio,periodo,fechapago,idtipogasto,importe) 
-VALUES (6,13,4,12,'20130924',2,6628.19) -- No inserta por la restriccion "CK_periodo" que permite solo meses iguales o anteriores al mes actual.
+VALUES (6,85,4,12,'20130924',2,6628.19) -- No inserta por la restriccion "CK_periodo" que permite solo meses iguales o anteriores al mes actual.
 
 INSERT INTO gasto (idprovincia,idlocalidad,idconsorcio,periodo,fechapago,idtipogasto,importe) 
-VALUES (6,13,4,11,'20130706',2,7886.76) -- No inserta por la restriccion "CK_periodo" que permite solo meses iguales o anteriores al mes actual.
+VALUES (6,85,4,11,'20130706',2,7886.76) -- No inserta por la restriccion "CK_periodo" que permite solo meses iguales o anteriores al mes actual.
 -- Fin Lote de Pruebas de Tabla Gasto --
 
 go
